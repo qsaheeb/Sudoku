@@ -1,0 +1,177 @@
+@import url("../node_modules/bootstrap/dist/css/bootstrap.min.css");
+@import url("../node_modules/@fortawesome/fontawesome-free/css/all.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap");
+
+article {
+  /*  leverage cascade for cross-browser gradients  */
+  background: radial-gradient(hsl(100 100% 60%), hsl(200 100% 60%)) fixed;
+  background: conic-gradient(hsl(100 100% 60%),
+      hsl(200 100% 60%),
+      hsl(100 100% 60%)) fixed;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  margin-top: 5rem;
+}
+
+body {
+  background: hsl(204 100% 5%);
+  /*   background: conic-gradient(
+    hsl(100 100% 60%), 
+    hsl(200 100% 60%),
+    hsl(100 100% 60%)
+  ) fixed; */
+  color: white;
+  min-block-size: 200vh;
+  min-inline-size: 100%;
+  padding: 5vmin;
+  box-sizing: border-box;
+  display: grid;
+  /*   place-content: center; */
+  /* font-family: system-ui; */
+  font-family: "Roboto";
+  font-size: min(100%, 4vmin);
+}
+
+h1,
+p,
+body {
+  margin: 0;
+}
+
+h1 {
+  font-size: 7vmin;
+  line-height: 1.1;
+  /* max-inline-size: 15ch; */
+  margin: auto;
+  font-family: "Odibee Sans", cursive;
+}
+
+p {
+  font-family: "Roboto";
+  margin-top: 1ch;
+  line-height: 1.35;
+  max-inline-size: 80ch;
+  margin: auto;
+  text-align: left;
+}
+
+html {
+  block-size: 100%;
+  inline-size: 100%;
+  text-align: left;
+}
+
+.square {
+  text-align: center;
+  border-radius: 0px;
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+  font-size: 2rem;
+  font-family: "Odibee Sans", cursive;
+}
+
+.backtrack {
+  font-family: "Odibee Sans", cursive;
+  background-color: #0077b6;
+  border-radius: 5px;
+  margin: 0;
+  text-align: center;
+}
+
+.square:focus {
+  background-color: #7ea6fc;
+  box-shadow: none;
+  outline: none;
+}
+
+.shadow {
+  font-size: 1.5rem;
+  background-color: #8ecae6;
+  font-family: "Odibee Sans", cursive;
+  background-image: linear-gradient(40deg,
+      #5b80f8 0%,
+      #00ffbf 45%,
+      #fffc00 100%);
+
+}
+
+.shadow:hover {
+  transform: scale(1.02);
+  transition: all 0.7s;
+}
+
+.form-check-input {
+  margin-top: 0.6rem;
+}
+
+.btn {
+  font-size: 1.4rem;
+  margin: 5%;
+}
+
+.sudoku-grid {
+  display: grid;
+  width: 500px;
+  height: 500px;
+  margin: auto;
+  grid-template: repeat(9, 1fr) / repeat(9, 1fr);
+}
+
+@media (max-width: 550px) {
+  h1 {
+    font-size: 45px;
+  }
+
+  .sudoku-grid {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+@media (max-width: 430px) {
+  .sudoku-grid {
+    width: 350px;
+    height: 350px;
+  }
+}
+
+@media (max-width: 380px) {
+  .sudoku-grid {
+    width: 300px;
+    height: 300px;
+  }
+
+  .square {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 330px) {
+  .sudoku-grid {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+.sudoku-grid *:nth-child(9n + 3),
+*:nth-child(9n + 6) {
+  border-right: 1px solid black;
+}
+
+.sudoku-grid *:nth-child(9n + 4),
+*:nth-child(9n + 7) {
+  border-left: 1px solid black;
+}
+
+.sudoku-grid *:nth-child(n + 19):nth-child(-n + 27),
+*:nth-child(n + 46):nth-child(-n + 54) {
+  border-bottom: 1px solid black;
+}
+
+.sudoku-grid *:nth-child(n + 28):nth-child(-n + 36),
+*:nth-child(n + 55):nth-child(-n + 63) {
+  border-top: 1px solid black;
+}

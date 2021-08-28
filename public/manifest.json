@@ -1,0 +1,25 @@
+{
+  "short_name": "Sudoku Backtrack",
+  "name": "Open Source Sudoku Backtrack process web app Made With ReactJS",
+  "icons": [
+    {
+      "src": "localhost_3000_(Galaxy S5) (2).png",
+      "sizes": "360x640",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "localhost_3000_(Galaxy S5) (3).png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "localhost_3000_(Pixel 2).png",
+      "type": "image/png",
+      "sizes": "411x731"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

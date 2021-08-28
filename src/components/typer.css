@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+
+/* $font: #00FF41;
+$bg: #003B00; */
+
+body {
+  font-family: "VT323", monospace;
+  background-color: #003b00;
+  padding: 1em 2em;
+}
+
+.typerr {
+  color: #00ff41;
+  font-family: "VT323", monospace;
+}
+
+#cursor {
+  border-left: 0.1em solid #00ff41;
+  animation: blink 0.7s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
